@@ -57,6 +57,7 @@ h1{
     border: 1px solid red;
     padding: 10px;
     margin-bottom: 1%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 1);
 }
 #foodImage{
     max-width: 100%;
@@ -78,6 +79,7 @@ h1{
 #recipeDetail2 {order: 1;}
 
 h2{
+    text-decoration: underline;
     text-align: center;
     margin-top: 2%;
     font-style: italic;
@@ -103,11 +105,9 @@ h2{
 }
 
 .services{
-    /* display: flex; */
     justify-content: space-between;
     margin: 2%;
     padding: 2%;
-    /* text-align: center; */
 }
 
 .serviceColumn{
@@ -133,20 +133,68 @@ h2{
     text-align: justify;
     padding-bottom: 2%;
 }
+h3{
+    margin-top: 5%;
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+}
+.form{
+    background-color: #ffe7dc;
+    width: auto;
+    margin: 5%;
+    padding: 5%;
+    box-shadow: 0 3px 10px gray;
+    
+}
+#message{height: 15%;}
+textarea::placeholder{
+    font-style: italic;
+    font-weight: 500;
+    font-size: larger;
+    padding-top: 15%;
+}
+#name, #email, #number, #submit{height: 5%;}
+#name, #email, #number, #message, #submit{
+    margin-top: 4%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    font-style: italic;
+    color: black;
+    background-color: white;
+}
+#submit{
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+}
 @media only screen and (min-width: 900px) {
     
+    .form{
+        width: 50%;
+        margin: 3%;
+        padding: 2%;
+        /* background-color: #ffe7dc; */
+    }
+    #message{height: 20%;}
+    #name, #email, #number, #submit{height: 10%;}
+    textarea::placeholder{
+        padding-top: 8%;
+    }
+
     .services{
-        /* width: 25%; */
         display: flex;
-        /* justify-content: space-around; */
-        /* margin-left: 10%; */
     }
 
     .serviceColumn{
         justify-content: space-between;
         margin-right: 1%;
     }
-
+    #mobileContactBanner{display: none;}
     #mobileBanner{
         display: none;
     }
@@ -225,8 +273,6 @@ h2{
         margin-left: 1%;
         transition: transform 0.5s;
     }
-
-    .serviceColumn-under
 
     .foodContainer:hover, .serviceColumn:hover{
         -ms-transform: scale(1.05);
